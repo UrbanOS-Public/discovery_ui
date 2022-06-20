@@ -45,7 +45,7 @@ export default class Header extends Component {
         }`}
       >
         <div className={"logo"}>
-          <a href={`${window.BASE_URL}`}>
+          <a href={`//${window.BASE_URL}`}>
             <img src={urbanosLogo}></img>
           </a>
         </div>
