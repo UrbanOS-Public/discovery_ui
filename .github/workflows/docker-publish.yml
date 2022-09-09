@@ -12,6 +12,8 @@ env:
   GITHUB_BRANCH: ${{ github.event.release.tag_name }}
   DOCKER_USERNAME: ${{ secrets.docker_username }}
   DOCKER_PASSWORD: ${{ secrets.docker_password }}
+  QUAY_USERNAME: ${{ secrets.quay_username }}
+  QUAY_PASSWORD: ${{ secrets.quay_password }}
 jobs:
   dev:
     name: Publish Development Image
