@@ -19,4 +19,4 @@ COPY docker_assets/nginx.conf /etc/nginx/nginx.conf
 COPY --from=builder /app/src/dist /usr/share/nginx/html
 USER root
 RUN apk update && apk upgrade
-EXPOSE  8080
+EXPOSE 8080
