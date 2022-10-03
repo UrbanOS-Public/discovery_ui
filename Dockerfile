@@ -20,3 +20,4 @@ COPY --from=builder /app/src/dist /usr/share/nginx/html
 USER root
 RUN apk update && apk upgrade
 EXPOSE 8080
+USER nginx
