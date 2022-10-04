@@ -7,6 +7,7 @@ import 'src/assets/urbanos-logo.png'
 describe('Header', () => {
   window.BASE_URL = 'testBaseUrl'
   window.LOGO_URL = 'testLogoSrc'
+  window.HEADER_TITLE = 'testHeaderTitle'
 
   test('contains clickable logo', () => {
     render(<Header />)
@@ -27,6 +28,12 @@ describe('Header', () => {
     // test-file-stub is returned by image-mock.js in place of the imported image
     expect(headerLogo).toHaveAttribute('src', 'test-file-stub')
     expect(headerLogo).toHaveAttribute('alt', 'default-header-logo')
+  })
+
+  test('contains header title', () => {
+    render(<Header />)
+
+    expect(screen.getByText('testHeaderTitle')).toBeInTheDocument()
   })
 
   test('contains explore link', () => {

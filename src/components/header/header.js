@@ -18,14 +18,17 @@ const Header = () => {
       <div
         className='nav-wrapper pinned'
       >
-        <div className='logo'>
-          <a href={`${window.BASE_URL}`}>
-            <img
-              src={`${window.LOGO_URL}`}
-              alt='header-logo'
-              onError={handleImageLoadError}
-            />
-          </a>
+        <div className='page-header'>
+          <div className='logo'>
+            <a href={`${window.BASE_URL}`}>
+              <img
+                src={`${window.LOGO_URL}`}
+                alt='header-logo'
+                onError={handleImageLoadError}
+              />
+            </a>
+          </div>
+          <span className='title'>{`${window.HEADER_TITLE}`}</span>
         </div>
         <div className='nav-element-container'>
           <a
