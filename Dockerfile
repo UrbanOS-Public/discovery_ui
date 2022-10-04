@@ -17,7 +17,6 @@ RUN chgrp -R 0 /app/src && \
 FROM nginx:alpine
 COPY docker_assets/nginx.conf /etc/nginx/nginx.conf
 COPY --from=builder /app/src/dist /usr/share/nginx/html
-USER root
 RUN apk update && apk upgrade
 EXPOSE 8080
-USER nginx
+CMD ["nginx", "-g", "daemon off;"]
