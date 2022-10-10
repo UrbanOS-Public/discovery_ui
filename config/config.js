@@ -1,7 +1,7 @@
 window.API_HOST = 'http://localhost:4000'
 window.CONTRIBUTE_HOST = 'http://localhost:4001'
 window.GTM_ID = ''
-window.BASE_URL = 'example.com'
+window.DISC_UI_URL = 'example.com'
 window.STREETS_TILE_LAYER_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 window.LOGO_URL = 'https://placekitten.com/530/530'
 window.FOOTER_LEFT_SIDE_TEXT = '© 2022 UrbanOS. All rights reserved.'

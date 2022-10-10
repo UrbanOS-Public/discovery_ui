@@ -35,7 +35,7 @@ Runtime configurations are stored in config/config.js.
 - GTM_ID
   Set this value to the Google Tag Manager ID to enable analytics.
 
-- BASE_URL
+- DISC_UI_URL
   The domain that the site will be hosted on
 
 ### Start the UI Locally

@@ -5,7 +5,7 @@ import Header from './header'
 import 'src/assets/urbanos-logo.png'
 
 describe('Header', () => {
-  window.BASE_URL = 'testBaseUrl'
+  window.DISC_UI_URL = 'testBaseUrl'
   window.LOGO_URL = 'testLogoSrc'
   window.HEADER_TITLE = 'testHeaderTitle'
 
