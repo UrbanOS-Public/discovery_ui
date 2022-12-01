@@ -29,7 +29,7 @@ are found in `test-start-point.js`
 
 Runtime configurations are stored in config/config.js.
 
-- API_HOST
+- DISC_API_URL
   This application is designed to be used with [discovery-api](https://github.com/smartcitiesdata/discovery_api) as the backend. Set this value to the URL of the local `discovery-api` endpoint.
 
 - GTM_ID
