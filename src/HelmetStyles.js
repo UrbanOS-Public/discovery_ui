@@ -12,6 +12,9 @@ export default class HelmetStyles extends Component {
                     .primary-color {
                         color: ${window.PRIMARY_COLOR};
                     }
+                    .primary-background-color {
+                        background-color: ${window.PRIMARY_COLOR};
+                    }
                     .selected .checkbox-indicator {
                         background-color: ${window.PRIMARY_COLOR};
                         border-color: ${window.PRIMARY_COLOR};
