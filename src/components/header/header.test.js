@@ -35,19 +35,4 @@ describe('Header', () => {
 
     expect(screen.getByText('testHeaderTitle')).toBeInTheDocument()
   })
-
-  test('contains explore link', () => {
-    render(<Header />)
-
-    const exploreLink = screen.getByText('EXPLORE DATA')
-    expect(exploreLink).toHaveAttribute('href', '/')
-  })
-
-  test('contains about link', () => {
-    render(<Header />)
-
-    const aboutLink = screen.getByText('ABOUT URBAN OS')
-
-    expect(aboutLink).toHaveAttribute('href', '/')
-  })
 })

@@ -30,17 +30,6 @@ const Header = () => {
           </div>
           <span className='title'>{`${window.HEADER_TITLE}`}</span>
         </div>
-        <div className='nav-element-container'>
-          <a
-            className='nav-element primary-color'
-            href='/'
-          >
-            EXPLORE DATA
-          </a>
-          <a className='nav-element' href='/'>
-            ABOUT URBAN OS
-          </a>
-        </div>
       </div>
     )
   }
