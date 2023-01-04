@@ -2,7 +2,7 @@
 
 Discovery UI provides default branding and navigation controls around the [react-discovery-ui](https://github.com/smartcitiesdata/react_discovery_ui) component. This allows for the base components to be brand agnostic.
 
-A guide on how to use an instance of discovery_ui is available in the [smartcitiesdata wiki](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual)
+A guide on how to use an instance of discovery_ui is available in the [smartcitiesdata wiki](<https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual>)
 
 ## How to use
 
@@ -39,6 +39,9 @@ Runtime configurations are stored in config/config.js.
   The domain that the site will be hosted on
 
 ### Start the UI Locally
+
+- Node version `v14.17.4`
+- NPM version `v9.2.0`
 
 `npm run start`
 
