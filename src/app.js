@@ -7,14 +7,14 @@ import Footer from './components/footer'
 export default class App extends Component {
   render() {
     return (
-      <div className="application">
+      <>
         <HelmetStyles />
-        <div className="content">
-          <Header />
+        <Header />
+        <main aria-label="Main content">
           <ReactDiscoveryUI />
-          <Footer />
-        </div>
-      </div>
+        </main>
+        <Footer />
+      </>
     );
   }
 }

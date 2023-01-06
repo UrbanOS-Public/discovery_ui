@@ -6,7 +6,7 @@ const Footer = () => {
     renderLink = ({ url, linkText }) => <a key={linkText} className="link" href={url}> {linkText}</a>;
 
   return (
-    <footer>
+    <footer aria-label="Footer">
       <div className='footer-wrapper'>
         <ul>
           {window.FOOTER_LEFT_SIDE_TEXT && <li key='left' className='left-side-text'>
