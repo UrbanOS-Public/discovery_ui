@@ -15,9 +15,7 @@ const Header = () => {
 
   const navBar = () => {
     return (
-      <div
-        className='nav-wrapper pinned'
-      >
+      <div className='nav-wrapper pinned' aria-label='Header'>
         <div className='page-header'>
           <div className='logo'>
             <a href={`${window.DISC_UI_URL}`}>
