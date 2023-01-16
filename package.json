@@ -1,6 +1,6 @@
 {
   "name": "discovery_ui",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "description": "UI for dataset discovery",
   "main": "./src/index.js",
   "repository": {
@@ -23,6 +23,8 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@smartcitiesdata/react-discovery-ui": "2.1.10",
     "immutable": "^3.8.2",
+    "package-lock.json": "^1.0.0",
+    "package.json": "^2.0.1",
     "react": "~16.8.6",
     "react-dom": "~16.8.6",
     "react-helmet": "^6.1.0",
