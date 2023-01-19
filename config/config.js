@@ -8,6 +8,7 @@ window.FOOTER_LEFT_SIDE_TEXT = '© 2022 UrbanOS. All rights reserved.'
 window.FOOTER_LEFT_SIDE_LINK = 'https://github.com/UrbanOS-Public/discovery_ui'
 window.FOOTER_RIGHT_LINKS = "[{\"linkText\":\"Example 1\", \"url\":\"https://www.example.com\"}, {\"linkText\":\"Example 2\", \"url\":\"https://www.google.com\"}]"
 window.HEADER_TITLE = 'UrbanOS Data Discovery'
+// omitting mapbox will default plot.ly to use openstreetmap.org
 window.MAPBOX_ACCESS_TOKEN = ''
 window.AUTH0_DOMAIN = 'urbanos-dev.us.auth0.com'
 window.AUTH0_CLIENT_ID = 'SHqaonqYEYiS4El57rGHplqLMG00pQKR'
