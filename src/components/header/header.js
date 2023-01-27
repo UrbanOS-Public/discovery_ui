@@ -21,7 +21,7 @@ const Header = () => {
             <a href={`${window.DISC_UI_URL}`}>
               <img
                 src={`${window.LOGO_URL}`}
-                alt='header-logo'
+                alt={`${window.HEADER_TITLE} logo`}
                 onError={handleImageLoadError}
               />
             </a>
