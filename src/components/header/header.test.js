@@ -12,17 +12,17 @@ describe('Header', () => {
   test('contains clickable logo', () => {
     render(<Header />)
 
-    const headerLogo = screen.getByAltText('header-logo')
+    const headerLogo = screen.getByAltText('testHeaderTitle logo')
 
     expect(headerLogo.closest('a')).toHaveAttribute('href', 'testBaseUrl')
     expect(headerLogo).toHaveAttribute('src', 'testLogoSrc')
-    expect(headerLogo).toHaveAttribute('alt', 'header-logo')
+    expect(headerLogo).toHaveAttribute('alt', 'testHeaderTitle logo')
   })
 
   test('uses backup logo when initial image src fails', () => {
     render(<Header />)
 
-    const headerLogo = screen.getByAltText('header-logo')
+    const headerLogo = screen.getByAltText('testHeaderTitle logo')
     fireEvent.error(headerLogo)
 
     // test-file-stub is returned by image-mock.js in place of the imported image
