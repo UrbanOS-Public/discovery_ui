@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const zopfli = require('@gfx/zopfli')
 const TerserPlugin = require('terser-webpack-plugin')
-const SriPlugin = require('webpack-subresource-integrity')
+const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity')
 const RobotstxtPlugin = require('robotstxt-webpack-plugin')
 
 module.exports = (env, argv) => {
@@ -17,12 +17,12 @@ module.exports = (env, argv) => {
       favicon: './src/favicon.ico'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
-      chunkFilename: '[id].[hash].css'
+      filename: '[name].[fullhash].css',
+      chunkFilename: '[id].[fullhash].css'
     }),
-    new CopyWebpackPlugin([
-      { from: 'config' }
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'config' }]
+    }),
     new RobotstxtPlugin({
       policy: [
         {
@@ -44,12 +44,17 @@ module.exports = (env, argv) => {
         return zopfli.gzip(input, compressionOptions, callback)
       }
     }))
-    plugins.push(new SriPlugin({
+    plugins.push(new SubresourceIntegrityPlugin({
       hashFuncNames: ['sha256', 'sha384']
     }))
   }
 
   return {
+    resolve: {
+      fallback: {
+        "assert": require.resolve("assert/")
+      }
+    },
     entry: {
       main: ['@babel/polyfill', path.join(__dirname, 'src', 'index.js')]
     },
@@ -83,11 +88,10 @@ module.exports = (env, argv) => {
             },
             'css-loader',
             {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: [require('autoprefixer')()]
-              }
+                loader: 'postcss-loader',
+                options: {
+                    postcssOptions: {plugins: [require('autoprefixer')()]}
+                }
             },
             'sass-loader'
           ]
@@ -100,7 +104,7 @@ module.exports = (env, argv) => {
     },
     devServer: {
       historyApiFallback: true,
-      contentBase: path.join(__dirname, 'dist'),
+      static: {directory: path.join(__dirname, 'dist')},
       compress: productionOptimizationsEnabled,
       open: true,
       port: 9002,
@@ -118,7 +122,7 @@ module.exports = (env, argv) => {
           }
         })
       ],
-      moduleIds: 'hashed',
+      moduleIds: 'deterministic',
       runtimeChunk: 'single',
       splitChunks: {
         cacheGroups: {
