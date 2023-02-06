@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -31,6 +32,9 @@ module.exports = (env, argv) => {
         }
       ],
       filePath: './robots.txt'
+    }),
+    new webpack.ProvidePlugin({
+        process: 'process/browser',
     })
   ]
 
@@ -82,7 +86,6 @@ module.exports = (env, argv) => {
         {
           test: /\.css$/,
           use: [
-            'style-loader',
             {
               loader: MiniCssExtractPlugin.loader
             },
