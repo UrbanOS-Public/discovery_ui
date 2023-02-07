@@ -18,8 +18,8 @@ module.exports = (env, argv) => {
       favicon: './src/favicon.ico'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[fullhash].css',
-      chunkFilename: '[id].[fullhash].css'
+      filename: '[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css'
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: 'config' }]
@@ -115,6 +115,7 @@ module.exports = (env, argv) => {
     },
     plugins: plugins,
     optimization: {
+      realContentHash: true,
       minimize: productionOptimizationsEnabled,
       minimizer: [
         new TerserPlugin({
