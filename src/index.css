@@ -23,6 +23,8 @@ body {
   min-height: 100%;
   margin: 0;
   width: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
 }
