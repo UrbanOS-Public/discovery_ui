@@ -34,7 +34,10 @@ module.exports = (env, argv) => {
       filePath: './robots.txt'
     }),
     new webpack.ProvidePlugin({
-        process: 'process/browser',
+      process: 'process/browser',
+    }),
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
     })
   ]
 
@@ -56,7 +59,9 @@ module.exports = (env, argv) => {
   return {
     resolve: {
       fallback: {
-        "assert": require.resolve("assert/")
+        "assert": require.resolve("assert/"),
+        "stream": require.resolve("stream-browserify"),
+        "buffer": require.resolve("buffer/")
       }
     },
     entry: {
@@ -91,10 +96,10 @@ module.exports = (env, argv) => {
             },
             'css-loader',
             {
-                loader: 'postcss-loader',
-                options: {
-                    postcssOptions: {plugins: [require('autoprefixer')()]}
-                }
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: { plugins: [require('autoprefixer')()] }
+              }
             },
             'sass-loader'
           ]
@@ -107,7 +112,7 @@ module.exports = (env, argv) => {
     },
     devServer: {
       historyApiFallback: true,
-      static: {directory: path.join(__dirname, 'dist')},
+      static: { directory: path.join(__dirname, 'dist') },
       compress: productionOptimizationsEnabled,
       open: true,
       port: 9002,
