@@ -25,6 +25,7 @@
     "buffer": "^6.0.3",
     "definitions": "0.0.2",
     "immutable": "^3.8.2",
+    "postcss": "^8.4.21",
     "react": "~16.8.6",
     "react-dom": "~16.8.6",
     "react-helmet": "^6.1.0",
