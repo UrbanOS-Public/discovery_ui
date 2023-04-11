@@ -1,6 +1,6 @@
 {
   "name": "discovery_ui",
-  "version": "2.1.25",
+  "version": "2.1.26",
   "description": "UI for dataset discovery",
   "main": "./src/index.js",
   "repository": {
@@ -21,7 +21,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "@smartcitiesdata/react-discovery-ui": "2.1.24",
+    "@smartcitiesdata/react-discovery-ui": "2.1.30",
     "buffer": "^6.0.3",
     "definitions": "0.0.2",
     "immutable": "^3.8.2",
