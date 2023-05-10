@@ -5,6 +5,8 @@ export default class HelmetStyles extends Component {
     render() {
         return (
             <Helmet>
+                <link href={`"data:image/x-icon;base64,${window.CUSTOM_FAV_ICON_BASE64}"`} rel="icon" type="image/x-icon" />
+
                 <style type="text/css">{`
                     content {
                         accent-color: ${window.PRIMARY_COLOR};
