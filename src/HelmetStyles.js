@@ -6,7 +6,7 @@ export default class HelmetStyles extends Component {
         return (
             <Helmet>
                 <link href={`"${window.CUSTOM_FAV_ICON_URL}"`} rel="icon" type="image/x-icon" />
-
+                <title>{`${window.HEADER_TITLE}`}</title>
                 <style type="text/css">{`
                     content {
                         accent-color: ${window.PRIMARY_COLOR};
