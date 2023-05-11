@@ -5,7 +5,7 @@ export default class HelmetStyles extends Component {
     render() {
         return (
             <Helmet>
-                <link href={`"${window.CUSTOM_FAV_ICON_URL}"`} rel="icon" type="image/x-icon" />
+              {window.CUSTOM_FAV_ICON_URL && (<link href={`${window.CUSTOM_FAV_ICON_URL}`} rel="icon" type="image/x-icon" />)}
 
                 <style type="text/css">{`
                     content {
