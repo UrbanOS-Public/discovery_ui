@@ -1,6 +1,6 @@
 window.CONTRIBUTE_HOST = 'http://localhost:4001'
 window.GTM_ID = ''
-window.DISC_API_URL = 'http://localhost:4001'
+window.DISC_API_URL = 'http://localhost:4000'
 window.DISC_UI_URL = 'https://www.example.com'
 window.STREETS_TILE_LAYER_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 window.LOGO_URL = 'https://placekitten.com/530/530'
