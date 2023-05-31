@@ -19,6 +19,13 @@ describe('Header', () => {
     expect(headerLogo).toHaveAttribute('alt', 'testHeaderTitle logo')
   })
 
+  test('contains clickable home icon', () => {
+    render(<Header />)
+
+    expect(screen.getByTestId('home-icon')).toBeInTheDocument
+    expect(screen.getAllByRole('link')[1].href).toContain("/testBaseUrl")
+  })
+
   test('uses backup logo when initial image src fails', () => {
     render(<Header />)
 

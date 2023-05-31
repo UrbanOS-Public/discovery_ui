@@ -1,6 +1,7 @@
 import './header.scss'
 import React, { useState } from 'react'
 import urbanosLogo from '../../assets/urbanos-logo.png'
+import HomeIcon from '@material-ui/icons/Home'
 
 const Header = () => {
   const [imageLoadError, setImageLoadError] = useState(false)
@@ -27,6 +28,11 @@ const Header = () => {
             </a>
           </div>
           <span className='title'>{`${window.HEADER_TITLE}`}</span>
+          <div className='home-icon-container' data-testid='home-icon-container'>
+            <a href={`${window.DISC_UI_URL}`}>
+              <HomeIcon className='home-icon' data-testid='home-icon'/>
+            </a>
+          </div>
         </div>
       </div>
     )
