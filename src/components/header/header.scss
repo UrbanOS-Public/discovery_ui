@@ -19,6 +19,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
   }
 
   .title {
@@ -90,22 +91,22 @@ header {
     
   }
 
-  // .nav-element:hover {
-  //   background-color: black;
-  //   color: white;
-  //   border: black solid 5px;
-  // }
-
   .highlighted {
     background-color: white;
     color: black;
     border: black solid 5px;
   }
 
-  // .highlighted:hover {
-  //   background-color: black;
-  //   color: white;
-  // }
+  .home-icon-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 10px;
+  }
+
+  .home-icon {
+    font-size: 2.5rem;
+  }
 
   .pinned {
     position: fixed;
@@ -156,10 +157,6 @@ header {
     a {
       padding: 10px;
     }
-  }
-
-  .title {
-    width: 90%;
   }
 
   .top-bar {
