@@ -1,4 +1,4 @@
-FROM node:14.17.4-alpine AS builder
+FROM node:20.9.0-alpine AS builder
 WORKDIR /app/src
 
 # Copy only the needed files to help docker caching
