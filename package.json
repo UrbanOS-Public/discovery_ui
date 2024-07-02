@@ -1,6 +1,6 @@
 {
   "name": "discovery_ui",
-  "version": "2.1.45",
+  "version": "2.1.46",
   "description": "UI for dataset discovery",
   "main": "./src/index.js",
   "repository": {
