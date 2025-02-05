@@ -54,3 +54,6 @@ You can view the UI in your web browser at `http://localhost:9001`
 ### Running the Docker Image
 
 `docker run -d --rm -p <port>:80 <image name>:<tag>`
+
+# Trigger Build
+do it.
