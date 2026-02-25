@@ -1,4 +1,5 @@
-FROM node:20.12.0-alpine AS builder
+FROM node:22-alpine AS builder
+RUN npm install -g npm@11
 WORKDIR /app/src
 
 # Copy only the needed files to help docker caching
