@@ -3,7 +3,7 @@ RUN npm install -g npm@11
 WORKDIR /app/src
 
 # Copy only the needed files to help docker caching
-COPY .babelrc package-lock.json package.json webpack.config.js nginx-csps.conf ./
+COPY .babelrc .npmrc package-lock.json package.json webpack.config.js nginx-csps.conf ./
 COPY src ./src
 COPY test-helpers ./test-helpers
 COPY config ./config
