@@ -1,4 +1,4 @@
-import ReactDiscoveryUI from '@smartcitiesdata/react-discovery-ui'
+import ReactDiscoveryUI from '@urbanos/react-discovery-ui'
 import { Component } from 'react'
 import HelmetStyles from './HelmetStyles';
 import Header from './components/header'
