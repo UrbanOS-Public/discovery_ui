@@ -14,7 +14,7 @@ const Footer = () => {
           </li>}
         </ul>
         <ul key='right' className='links'>
-          {rightLinks.map(renderLink)}
+          {rightLinks.map(link => <li key={link.linkText}>{renderLink(link)}</li>)}
         </ul>
       </div>
     </footer>

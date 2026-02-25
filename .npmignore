@@ -1,0 +1,17 @@
+# Local tooling
+.claude/
+.tool-versions
+
+# CI/CD & GitHub
+.github/
+
+# Docker & deployment
+.dockerignore
+Dockerfile
+docker_assets/
+nginx-csps.conf
+scripts/
+
+# Tests
+test-helpers/
+src/**/*.test.js
