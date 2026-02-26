@@ -58,6 +58,10 @@ module.exports = (env, argv) => {
 
   return {
     resolve: {
+      alias: {
+        react: path.resolve('./node_modules/react'),
+        'react-dom': path.resolve('./node_modules/react-dom')
+      },
       fallback: {
         "assert": require.resolve("assert/"),
         "stream": require.resolve("stream-browserify"),
