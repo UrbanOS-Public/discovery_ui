@@ -109,7 +109,16 @@ module.exports = (env, argv) => {
           ]
         },
         {
+          test: /variables\.scss$/,
+          include: [path.resolve('./node_modules/@urbanos/react-discovery-ui')],
+          use: [
+            { loader: 'css-loader', options: { modules: { exportOnlyLocals: true } } },
+            'sass-loader'
+          ]
+        },
+        {
           test: /\.scss$/,
+          exclude: [path.resolve('./node_modules/@urbanos/react-discovery-ui/lib/styles/variables.scss')],
           use: ['style-loader', 'css-loader', 'sass-loader']
         }
       ]
