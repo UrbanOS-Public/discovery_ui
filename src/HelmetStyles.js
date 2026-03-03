@@ -25,13 +25,13 @@ export default class HelmetStyles extends Component {
                         color: ${window.PRIMARY_COLOR};
                     }
                     a {
-                        color: ${window.PRIMARY_COLOR};
+                        color: ${window.LINK_COLOR || window.PRIMARY_COLOR};
                     }
                     dataset-metadata a {
-                        color: ${window.PRIMARY_COLOR};
+                        color: ${window.LINK_COLOR || window.PRIMARY_COLOR};
                     }
                     dataset-dictionary .view-link a {
-                        color: ${window.PRIMARY_COLOR};
+                        color: ${window.LINK_COLOR || window.PRIMARY_COLOR};
                     }
                     login-zone button.action {
                         background-color: ${window.PRIMARY_COLOR};

@@ -1,6 +1,6 @@
 {
   "name": "@urbanos/discovery-ui",
-  "version": "2.1.50",
+  "version": "2.1.57",
   "description": "UI for dataset discovery",
   "main": "./src/index.js",
   "repository": {
