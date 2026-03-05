@@ -34,10 +34,10 @@ module.exports = (env, argv) => {
       filePath: './robots.txt'
     }),
     new webpack.ProvidePlugin({
-      process: 'process/browser',
+      process: 'process/browser'
     }),
     new webpack.ProvidePlugin({
-      Buffer: ['buffer', 'Buffer'],
+      Buffer: ['buffer', 'Buffer']
     })
   ]
 
@@ -47,7 +47,7 @@ module.exports = (env, argv) => {
       compressionOptions: {
         numiterations: 15
       },
-      algorithm(input, compressionOptions, callback) {
+      algorithm (input, compressionOptions, callback) {
         return zopfli.gzip(input, compressionOptions, callback)
       }
     }))
@@ -63,9 +63,9 @@ module.exports = (env, argv) => {
         'react-dom': path.resolve('./node_modules/react-dom')
       },
       fallback: {
-        "assert": require.resolve("assert/"),
-        "stream": require.resolve("stream-browserify"),
-        "buffer": require.resolve("buffer/")
+        assert: require.resolve('assert/'),
+        stream: require.resolve('stream-browserify'),
+        buffer: require.resolve('buffer/')
       }
     },
     entry: {
@@ -131,7 +131,7 @@ module.exports = (env, argv) => {
       port: 9002,
       host: 'localhost'
     },
-    plugins: plugins,
+    plugins,
     optimization: {
       realContentHash: true,
       minimize: productionOptimizationsEnabled,

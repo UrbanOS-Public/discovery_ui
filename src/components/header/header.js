@@ -29,8 +29,8 @@ const Header = () => {
           </div>
           <span className='title'>{`${window.HEADER_TITLE}`}</span>
           <div className='home-icon-container' data-testid='home-icon-container'>
-            <a href={`${window.DISC_UI_URL}`}>
-              <HomeIcon className='home-icon' data-testid='home-icon'/>
+            <a href={`${window.DISC_UI_URL}`} aria-label='Home'>
+              <HomeIcon className='home-icon' data-testid='home-icon' />
             </a>
           </div>
         </div>

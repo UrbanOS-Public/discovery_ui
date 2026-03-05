@@ -1,13 +1,13 @@
 import { Component } from 'react'
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet'
 
 export default class HelmetStyles extends Component {
-    render() {
-        return (
-            <Helmet>
-                {window.CUSTOM_FAV_ICON_URL && (<link href={`${window.CUSTOM_FAV_ICON_URL}`} rel="icon" type="image/x-icon" />)}
-                <title>{`${window.HEADER_TITLE}`}</title>
-                <style type="text/css">{`
+  render () {
+    return (
+      <Helmet>
+        {window.CUSTOM_FAV_ICON_URL && (<link href={`${window.CUSTOM_FAV_ICON_URL}`} rel='icon' type='image/x-icon' />)}
+        <title>{`${window.HEADER_TITLE}`}</title>
+        <style type='text/css'>{`
                     content {
                         accent-color: ${window.PRIMARY_COLOR};
                     }
@@ -61,8 +61,9 @@ export default class HelmetStyles extends Component {
                     dataset-detail-view dataset-details .keyword {
                         color: ${window.PRIMARY_COLOR};
                     }
-                `}</style>
-            </Helmet>
-        );
-    }
+                `}
+        </style>
+      </Helmet>
+    )
+  }
 }

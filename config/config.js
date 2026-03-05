@@ -6,7 +6,7 @@ window.STREETS_TILE_LAYER_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.
 window.LOGO_URL = 'https://placekitten.com/530/530'
 window.FOOTER_LEFT_SIDE_TEXT = '© 2022 UrbanOS. All rights reserved.'
 window.FOOTER_LEFT_SIDE_LINK = 'https://github.com/UrbanOS-Public/discovery_ui'
-window.FOOTER_RIGHT_LINKS = "[{\"linkText\":\"Example 1\", \"url\":\"https://www.example.com\"}, {\"linkText\":\"Example 2\", \"url\":\"https://www.google.com\"}]"
+window.FOOTER_RIGHT_LINKS = '[{"linkText":"Example 1", "url":"https://www.example.com"}, {"linkText":"Example 2", "url":"https://www.google.com"}]'
 window.HEADER_TITLE = 'UrbanOS Data Discovery'
 // omitting mapbox will default plot.ly to use openstreetmap.org
 window.MAPBOX_ACCESS_TOKEN = ''

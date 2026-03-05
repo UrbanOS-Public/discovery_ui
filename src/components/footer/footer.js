@@ -1,12 +1,11 @@
 import './footer.scss'
 
 const Footer = () => {
-
-  const rightLinks = JSON.parse(window.FOOTER_RIGHT_LINKS),
-    renderLink = ({ url, linkText }) => <a key={linkText} className="link" href={url}> {linkText}</a>;
+  const rightLinks = JSON.parse(window.FOOTER_RIGHT_LINKS)
+  const renderLink = ({ url, linkText }) => <a key={linkText} className='link' href={url}> {linkText}</a>
 
   return (
-    <footer aria-label="Footer">
+    <footer aria-label='Footer'>
       <div className='footer-wrapper'>
         <ul>
           {window.FOOTER_LEFT_SIDE_TEXT && <li key='left' className='left-side-text'>
