@@ -16,4 +16,4 @@ window.AUTH0_AUDIENCE = 'discovery_api'
 window.REQUIRE_API_KEY = 'false'
 window.REGENERATE_API_KEY_FF = 'true'
 window.PRIMARY_COLOR = '#28807C'
-window.LINK_COLOR = '#327b79'
+window.LINK_COLOR = '#134B4B' // '#327b79' // notenough contrast
