@@ -11,3 +11,7 @@ lint:
 
 publish: build
 	npm publish --access public --registry https://registry.npmjs.org
+
+release:
+	npm install
+	batcat docs/RELEASE_QUESTIONS.md
