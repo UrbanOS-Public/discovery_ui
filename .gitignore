@@ -13,3 +13,7 @@ lib/
 
 .idea/
 tmp/
+
+# emacs editor files
+*~
+[#]*[#]
