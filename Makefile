@@ -14,4 +14,5 @@ publish: build
 
 release:
 	npm install
-	batcat docs/RELEASE_QUESTIONS.md
+	#batcat docs/RELEASE_QUESTIONS.md
+	./scripts/release_instructions.sh
