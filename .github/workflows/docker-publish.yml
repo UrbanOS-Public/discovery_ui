@@ -21,7 +21,7 @@ jobs:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Build Image
         run: docker build -t discovery_ui:build .
       - name: Publish Dev Image
@@ -35,7 +35,7 @@ jobs:
     if: github.event_name == 'release'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Build Image
         run: docker build -t discovery_ui:build .
       - name: Publish Tagged Image
